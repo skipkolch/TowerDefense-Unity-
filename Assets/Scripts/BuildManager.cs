@@ -20,6 +20,13 @@ public class BuildManager : MonoBehaviour
         _gunToBuild = gun;
     }
 
+
+    public void DestroyBuild(GameObject _gun)
+    {
+        PlayerStats.Money += (_gunToBuild.cost / 2);
+        Destroy(_gun);
+    }
+    
     public void BuildGunOn(Node node)
     {
         if (PlayerStats.Money < _gunToBuild.cost)

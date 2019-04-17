@@ -147,6 +147,6 @@ MonoBehaviour:
   _speed: 20
   _speedUp: 3
   _health: 100
-  _addMoney: 50
+  _addMoney: 25
   _deathEffect: {fileID: 4022692993553811440, guid: cbf54c146c0b1a94c90e07a5d0256110,
     type: 3}

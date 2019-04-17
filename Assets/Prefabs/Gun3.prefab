@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 7908777427631505231}
   _lineRenderer: {fileID: 5583122806343594950}
   _impactEffect: {fileID: 4499637904601411183}
+  _impactLight: {fileID: 7450264782623562443}
 --- !u!120 &5583122806343594950
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -5088,6 +5089,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: ShapeModule.m_Rotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3292976177948739434, guid: 81201075bfe9b2541ae894e9fb355841,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5142,46 +5183,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: ShapeModule.type
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: ShapeModule.m_Rotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: ShapeModule.m_Rotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875967495270740317, guid: 81201075bfe9b2541ae894e9fb355841,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2286434918400743163, guid: 81201075bfe9b2541ae894e9fb355841,
         type: 3}

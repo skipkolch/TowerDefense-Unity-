@@ -34,10 +34,9 @@ public class Node : MonoBehaviour
         
         if (_gun != null)
         {
-           Destroy(_gun);
+           _buildManager.DestroyBuild(_gun);
             return;
         }
-
         
         _buildManager.BuildGunOn(this);
     }

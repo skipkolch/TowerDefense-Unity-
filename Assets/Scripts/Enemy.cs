@@ -3,50 +3,47 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _intensityLight;
-    [SerializeField] private float _speed = 10f;
+    [SerializeField] private float _startSpeed = 10f;
     [SerializeField] private float _speedUp = 2;
-    [SerializeField] private int _health = 100;
+    [SerializeField] private float _startHealth = 100;
     [SerializeField] private int _addMoney = 50;
     [SerializeField] private GameObject _deathEffect;
+    [SerializeField] private Image _healthBar;
     
-    private Light _light;
-    private Transform _target;
-    private int _wavepointIndex = 0;
+    private Light _light;  
+    private float _currentHealth;
+    private float _speed;
+        
+    public float Speed
+    {
+        get => _speed;
+        set => _speed = value;
+    }
 
+    public float SpeedUp => _speedUp;
+    
+    public float StartSpeed => _startSpeed;
     
     private void Awake()
     {
         _light = GetComponent<Light>();
         _light.DOIntensity(_intensityLight, 2f);
+        _currentHealth = _startHealth;
+        _speed = _startSpeed;
     }
 
-    private void Start()
+    public void TakeDamage(float amount)
     {
-        _target = Waypoints.Points[_wavepointIndex];
-    }
+        _currentHealth -= amount;
 
-    // Update is called once per frame
-    private void Update()
-    {
-        var dir = _target.position - transform.position;
-        transform.Translate(dir.normalized * _speed * Time.deltaTime, Space.World);
+        _healthBar.fillAmount = _currentHealth / _startHealth;
 
-        if (Vector3.Distance(transform.position, _target.position) <= 0.5f)
-        {
-            transform.position = _target.position;
-            SetNextPoint();
-        }
-    }
-
-    public void TakeDamage(int amount)
-    {
-        _health -= amount;
-
-        if (_health <= 0)
+        if (_currentHealth <= 0)
             EmenyDie();
     }
 
@@ -59,23 +56,10 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void SetNextPoint()
-    {
-        try
-        {
-            _wavepointIndex++;
-            _speed += _speedUp;
-            _target = Waypoints.Points[_wavepointIndex];
-        }
-        catch (IndexOutOfRangeException ex)
-        {
-            PushTower();
-        }
-    }
 
-    private void PushTower()
+    public void Slow(float percent)
     {
-        PlayerStats.Lives--;
-        Destroy(gameObject);
+        _speed = _startSpeed * (1f - percent);
     }
+   
 }

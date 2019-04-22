@@ -10,7 +10,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private float _timeBetweenWaves = 5f;
     [SerializeField] private Text _timeWave;
 
-    private float _countDown = 2f;
+    private float _countDown = 3f;
 
     private int waveIndex;
 

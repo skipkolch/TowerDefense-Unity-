@@ -107,5 +107,5 @@ MonoBehaviour:
   _speed: 60
   _impactEffect: {fileID: 6195061611084922740, guid: 9a1d880736df8b54da45c05aed871aab,
     type: 3}
-  _damage: 90
+  _damage: 60
   _explosionRadius: 10

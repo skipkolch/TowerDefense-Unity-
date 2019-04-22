@@ -18,6 +18,7 @@ namespace GunSpace
         protected float shortestDistance;
         protected GameObject nearEnemy;
         protected  Transform _target;
+        protected Enemy _enemy;
        
 
         private void Start()
@@ -59,6 +60,7 @@ namespace GunSpace
         protected virtual void SelectTarget()
         {
             _target = nearEnemy.transform;
+            _enemy = nearEnemy.GetComponent<Enemy>();
         }
 
         

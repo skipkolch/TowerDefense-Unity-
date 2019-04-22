@@ -9,8 +9,10 @@ public class Laser : Gun
    private LineRenderer _lineRenderer;
    [SerializeField] private ParticleSystem _impactEffect;
    [SerializeField] private Light _impactLight;
+   [SerializeField] private int damageOverTime = 30;
+   [SerializeField] private float _slowPercent = .5f;
 
-
+   
    public override void Update()
    {
       if (_target == null)
@@ -33,6 +35,10 @@ public class Laser : Gun
 
    protected override void Shoot()
    {
+      
+      _enemy.TakeDamage(damageOverTime * Time.deltaTime);
+      _enemy.Slow(_slowPercent);
+      
       if (!_lineRenderer.enabled)
       {
          _impactLight.enabled = true;

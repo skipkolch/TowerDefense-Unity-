@@ -69,6 +69,7 @@
           <e p="Bullet.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="EnemyMovement.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GameOver.cs" t="Include" />
           <e p="Gun.cs" t="Include" />
@@ -77,8 +78,11 @@
           <e p="MoneyUI.cs" t="Include" />
           <e p="Node.cs" t="Include" />
           <e p="PlayerStats.cs" t="Include" />
+          <e p="SceneFader.cs" t="Include" />
           <e p="Shop.cs" t="Include" />
+          <e p="Tower.cs" t="Include" />
           <e p="Turret.cs" t="Include" />
+          <e p="Wave.cs" t="Include" />
           <e p="WaveSpawner.cs" t="Include" />
           <e p="Waypoints.cs" t="Include" />
         </e>

@@ -43,7 +43,7 @@ public class Laser : Gun
       {
          _impactLight.enabled = true;
          _lineRenderer.enabled = true;
-         _impactEffect.Play();
+        _impactEffect.Play();
       } 
       
       var position = _target.position;

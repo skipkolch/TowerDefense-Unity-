@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _addMoney = 50;
     [SerializeField] private GameObject _deathEffect;
     [SerializeField] private Image _healthBar;
+    [SerializeField] private float _damage;
     
     private Light _light;  
     private float _currentHealth;
@@ -28,6 +29,8 @@ public class Enemy : MonoBehaviour
     public float SpeedUp => _speedUp;
     
     public float StartSpeed => _startSpeed;
+
+    public float Damage => _damage;
     
     private void Awake()
     {
@@ -51,6 +54,8 @@ public class Enemy : MonoBehaviour
     {
         var effect = Instantiate(_deathEffect, transform.position, Quaternion.identity);
         Destroy(effect,5f);
+        
+        WaveSpawner.EnemiesAlive--;
         
         PlayerStats.Money += _addMoney;
         Destroy(gameObject);

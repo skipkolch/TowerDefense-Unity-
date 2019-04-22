@@ -21,6 +21,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="GameOver.cs" t="Include" />
         <e p="Particle Dissolve Shader by Moonflower Carnivore" t="Include">
           <e p="readme.txt" t="Include" />
           <e p="Scripts" t="Include">

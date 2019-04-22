@@ -21,7 +21,6 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
-        <e p="GameOver.cs" t="Include" />
         <e p="Particle Dissolve Shader by Moonflower Carnivore" t="Include">
           <e p="readme.txt" t="Include" />
           <e p="Scripts" t="Include">
@@ -71,6 +70,7 @@
           <e p="CameraController.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GameOver.cs" t="Include" />
           <e p="Gun.cs" t="Include" />
           <e p="GunBlueprint.cs" t="Include" />
           <e p="Laser.cs" t="Include" />

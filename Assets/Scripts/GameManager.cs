@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown("e"))
+            EndGame();
+        
+        
         if(GameIsOver)
             return;
         

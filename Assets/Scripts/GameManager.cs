@@ -7,14 +7,16 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public static GameManager instance;
     [SerializeField] private string _enemyTag = "Enemy";
 
-    [HideInInspector] public GameObject[] GetEnemiesOnMap { get; private set; }
+    [SerializeField] private GameObject _gameOverUI;
 
-    private bool _gameEnded;
+    [HideInInspector] public GameObject[] GetEnemiesOnMap { get; private set; }
     
+    public static bool GameIsOver;
+
     private void Awake()
     {
         instance = this;
-        _gameEnded = false;
+        GameIsOver = false;
     }
     
     private void Start()
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(_gameEnded)
+        if(GameIsOver)
             return;
         
         if (PlayerStats.Lives <= 0)
@@ -38,7 +40,9 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        _gameEnded = true;
+        GameIsOver = true;
         Debug.Log("Game Over");
+        
+        _gameOverUI.SetActive(true);
     }
 }

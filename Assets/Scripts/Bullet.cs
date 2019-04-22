@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected float _speed = 70f;
     [SerializeField] private GameObject _impactEffect;
     [SerializeField] private int _damage;
-    
+      
     
     protected Transform _target;
     private float _distanceThisFrame;

@@ -15,6 +15,13 @@ public class CameraController : MonoBehaviour
     private bool doMove = false;
     private void Update() 
     {
+        if (GameManager.GameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+        
+        
         if (Input.GetKey(KeyCode.Space))
             doMove = !doMove;
         
